@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ros:Architecture xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ros="http://ros/1.0" name="Navigation">
+  <topic name="\cd_mn_image">
+    <publisher href="marker_nav.ros_package#//@node.1/@publisher.0"/>
+    <subscriber href="marker_nav.ros_package#//@node.0/@subscriber.0"/>
+  </topic>
+  <topic name="\odom">
+    <publisher href="local_nav.ros_package#//@node.1/@publisher.0"/>
+    <subscriber href="local_nav.ros_package#//@node.0/@subscriber.0"/>
+  </topic>
+  <packages href="local_nav.ros_package#/"/>
+  <packages href="marker_nav.ros_package#/"/>
+  <packages href="geometric_nav.ros_package#/"/>
+  <service name="\twist_srv">
+    <serviceserver href="local_nav.ros_package#//@node.1/@serviceServer.0"/>
+    <serviceclient href="local_nav.ros_package#//@node.0/@serviceClient.0"/>
+  </service>
+  <service name="\map_srv">
+    <serviceserver href="geometric_nav.ros_package#//@node.1/@serviceServer.0"/>
+    <serviceclient href="geometric_nav.ros_package#//@node.0/@serviceClient.0"/>
+  </service>
+</ros:Architecture>

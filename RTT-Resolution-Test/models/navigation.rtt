@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rtt:Package xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:rtt="http://rtt/1.0" name="Navigation TSM">
+  <taskContext name="Local Navigation" namespace="">
+    <inputPort name="LN_Odometry" inputConnectionPolicy="//@connectionPolicy.1"/>
+    <inputPort name="LN_Path"/>
+    <outputPort name="LN_Twist" outputConnectionPolicy="//@connectionPolicy.0"/>
+  </taskContext>
+  <taskContext name="RobotDriver" namespace="BRICS_Drivers" type="YouBotDriver">
+    <inputPort name="RD_Twist" inputConnectionPolicy="//@connectionPolicy.0"/>
+    <outputPort name="RD_Odometry" outputConnectionPolicy="//@connectionPolicy.1"/>
+  </taskContext>
+  <taskContext name="Geometrical Navigation" namespace="">
+    <outputPort name="GN_Path"/>
+  </taskContext>
+  <taskContext name="Marker Navigation" namespace="MBN" type="MarkerBased">
+    <inputPort name="MN_Image" inputConnectionPolicy="//@connectionPolicy.2"/>
+    <outputPort name="MN_Path"/>
+  </taskContext>
+  <taskContext name="Camera Driver" namespace="BRICS_Drivers" type="CameraDriver">
+    <outputPort name="CD_Image" outputConnectionPolicy="//@connectionPolicy.2"/>
+    <property name="CalibrationFile"/>
+  </taskContext>
+  <connectionPolicy inputPort="//@taskContext.1/@inputPort.0" outputPort="//@taskContext.0/@outputPort.0" name="LN_RD_Twist"/>
+  <connectionPolicy inputPort="//@taskContext.0/@inputPort.0" outputPort="//@taskContext.1/@outputPort.0" name="RD_LN_Odometry"/>
+  <connectionPolicy inputPort="//@taskContext.3/@inputPort.0" outputPort="//@taskContext.4/@outputPort.0" name="CD_MN_Image"/>
+</rtt:Package>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ros:Package xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ros="http://ros/1.0" name="Local Navigation" rosdep="">
+  <node name="Local Navigation">
+    <subscriber name="ln_odom_sub"/>
+    <serviceClient name="ln_twist_sc"/>
+    <actionserver name="ln_path_as"/>
+  </node>
+  <node name="Robot Driver">
+    <publisher name="rd_odom_pub"/>
+    <serviceServer name="rd_twist_ss"/>
+  </node>
+  <depend>std_msgs</depend>
+</ros:Package>

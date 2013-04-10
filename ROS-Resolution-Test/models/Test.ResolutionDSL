@@ -1,0 +1,26 @@
+
+
+ResolutionModel "myModel" {
+	
+	ROS resolution elements {
+		
+		ROS Resolution Element "1" {
+			
+			description "a" feature "Navigation" 
+			
+			required connections ROS Required Connections{
+				
+				required topic connections { publisher "a", subscriber "b", topic "c" }, {publisher "a", subscriber "b", topic "c"},
+				required action connections
+			}
+			
+		}
+		
+		
+		
+	}
+	 
+	
+	
+	
+}

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ros:Package xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ros="http://ros/1.0" name="Marker Navigation">
+  <node name="Marker Navigation">
+    <subscriber name="mn_image_sub"/>
+    <actionclient name="mn_path_ac"/>
+  </node>
+  <node name="Camera Driver">
+    <publisher name="cd_image_pub"/>
+    <parameter name="Camera Model" type="string"/>
+  </node>
+</ros:Package>

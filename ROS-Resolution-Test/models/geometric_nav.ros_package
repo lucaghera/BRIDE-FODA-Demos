@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ros:Package xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ros="http://ros/1.0" name="Geometric Navigation">
+  <node name="Geometric Navigation">
+    <serviceClient name="gn_map_sc"/>
+    <actionclient name="gn_path_ac" ActionType=""/>
+  </node>
+  <node name="Map Server">
+    <serviceServer name="ms_map_ss"/>
+  </node>
+</ros:Package>

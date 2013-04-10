@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Ns:FeatureModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:Ns="http://robotics.unibg.it/featuremodels" name="Navigation Feature Model">
+  <rootFeature name="Navigation" root="true" required="true">
+    <subFeatures name="Obstacle Avoidance" required="true">
+      <subCompositeFeatures upperBound="1">
+        <subFeatures name="DWA"/>
+        <subFeatures name="VFH"/>
+      </subCompositeFeatures>
+    </subFeatures>
+    <subFeatures name="Camera Model">
+      <subCompositeFeatures upperBound="1">
+        <subFeatures name="Camera1"/>
+        <subFeatures name="Camera2"/>
+      </subCompositeFeatures>
+    </subFeatures>
+    <subFeatures name="Navigation Strategy" required="true">
+      <subCompositeFeatures>
+        <subFeatures name="MapBased"/>
+        <subFeatures name="MarkerBased"/>
+      </subCompositeFeatures>
+    </subFeatures>
+    <subFeatures name="Local Navigation" required="true"/>
+  </rootFeature>
+  <constraints name="Marker Requires Camera Model" rule="'MarkerBased' REQUIRES 'Camera Model'"/>
+  <instances id="Map Based" descritpion="Map Based + DWA" selectedFeatures="//@rootFeature //@rootFeature/@subFeatures.0 //@rootFeature/@subFeatures.2 //@rootFeature/@subFeatures.3 //@rootFeature/@subFeatures.2/@subCompositeFeatures.0/@subFeatures.0 //@rootFeature/@subFeatures.0/@subCompositeFeatures.0/@subFeatures.0"/>
+  <instances id="Marker Based" descritpion="(VHF + Camera 2)" selectedFeatures="//@rootFeature //@rootFeature/@subFeatures.0 //@rootFeature/@subFeatures.2 //@rootFeature/@subFeatures.3 //@rootFeature/@subFeatures.2/@subCompositeFeatures.0/@subFeatures.1 //@rootFeature/@subFeatures.0/@subCompositeFeatures.0/@subFeatures.1 //@rootFeature/@subFeatures.1 //@rootFeature/@subFeatures.1/@subCompositeFeatures.0/@subFeatures.0"/>
+</Ns:FeatureModel>

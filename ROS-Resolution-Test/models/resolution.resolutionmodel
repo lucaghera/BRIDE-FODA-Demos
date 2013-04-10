@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Ns:ResolutionModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Ns="http://robotics.unibg.it/resolutionmodels" xmlns:Ns_1="http://robotics.unibg.it/resolutionmodels.ros" name="Navigation resolution">
+  <resolutionElements name="LocalNav" description="LocalNav">
+    <requiredComponents xsi:type="Ns_1:ROSRequiredComponents">
+      <ROSNodes href="local_nav.ros_package#//@node.0"/>
+      <ROSNodes href="local_nav.ros_package#//@node.1"/>
+    </requiredComponents>
+    <requiredConnections xsi:type="Ns_1:ROSRequiredConnections">
+      <requiredTopicConnections name="ln_rd_odom">
+        <publisher href="local_nav.ros_package#//@node.1/@publisher.0"/>
+        <subscriber href="local_nav.ros_package#//@node.0/@subscriber.0"/>
+        <topic href="system.ros_system#//@topic.1"/>
+      </requiredTopicConnections>
+      <requiredServiceConnections name="ln_rd_twist">
+        <serviceServer href="local_nav.ros_package#//@node.1/@serviceServer.0"/>
+        <serviceClient href="local_nav.ros_package#//@node.0/@serviceClient.0"/>
+        <service href="system.ros_system#//@service.0"/>
+      </requiredServiceConnections>
+    </requiredConnections>
+    <feature href="variability.featuremodel#//@rootFeature/@subFeatures.0"/>
+  </resolutionElements>
+  <resolutionElements name="Marker Navigation" description="Marker Navigation">
+    <transformations xsi:type="Ns_1:ROSTransfConnection" name="Marker-Local Connection" description="Marker-Local Connection">
+      <newConnections xsi:type="Ns_1:ROSNewActionConnection" name="mn_ln_path" actionName="mn_ln_path">
+        <actionServer href="local_nav.ros_package#//@node.0/@actionserver.0"/>
+        <actionClient href="marker_nav.ros_package#//@node.0/@actionclient.0"/>
+      </newConnections>
+    </transformations>
+    <requiredComponents xsi:type="Ns_1:ROSRequiredComponents">
+      <ROSNodes href="marker_nav.ros_package#//@node.1"/>
+      <ROSNodes href="marker_nav.ros_package#//@node.0"/>
+    </requiredComponents>
+    <requiredConnections xsi:type="Ns_1:ROSRequiredConnections">
+      <requiredTopicConnections name="Image">
+        <publisher href="marker_nav.ros_package#//@node.1/@publisher.0"/>
+        <subscriber href="marker_nav.ros_package#//@node.0/@subscriber.0"/>
+        <topic href="system.ros_system#//@topic.0"/>
+      </requiredTopicConnections>
+    </requiredConnections>
+    <feature href="variability.featuremodel#//@rootFeature/@subFeatures.2/@subCompositeFeatures.0/@subFeatures.0"/>
+  </resolutionElements>
+  <resolutionElements name="Geometric Navigation" description="Geometric Navigation">
+    <transformations xsi:type="Ns_1:ROSTransfConnection" name="Geometric-Local Connection" description="Geometric-Local Connection">
+      <newConnections xsi:type="Ns_1:ROSNewActionConnection" name="gn_ln_path" actionName="gn_ln_path">
+        <actionServer href="local_nav.ros_package#//@node.0/@actionserver.0"/>
+        <actionClient href="geometric_nav.ros_package#//@node.0/@actionclient.0"/>
+      </newConnections>
+    </transformations>
+    <requiredComponents xsi:type="Ns_1:ROSRequiredComponents">
+      <ROSNodes href="geometric_nav.ros_package#//@node.0"/>
+      <ROSNodes href="geometric_nav.ros_package#//@node.1"/>
+    </requiredComponents>
+    <requiredConnections xsi:type="Ns_1:ROSRequiredConnections">
+      <requiredServiceConnections name="ms_gn_map">
+        <serviceServer href="geometric_nav.ros_package#//@node.1/@serviceServer.0"/>
+        <serviceClient href="geometric_nav.ros_package#//@node.0/@serviceClient.0"/>
+        <service href="system.ros_system#//@service.1"/>
+      </requiredServiceConnections>
+    </requiredConnections>
+    <feature href="variability.featuremodel#//@rootFeature/@subFeatures.2/@subCompositeFeatures.0/@subFeatures.1"/>
+  </resolutionElements>
+  <resolutionElements name="Obstacle Avoidance Alg" description="Obstacle Avoidance DWA Alg">
+    <transformations xsi:type="Ns_1:ROSTransfImplementation" name="Local Navigation DWA Impl" description="Local Navigation DWA Impl" classNamespace="local_nav1" className="local_navigation_DWA">
+      <targetNode href="local_nav.ros_package#//@node.0"/>
+    </transformations>
+    <feature href="variability.featuremodel#//@rootFeature/@subFeatures.1/@subCompositeFeatures.0/@subFeatures.0"/>
+  </resolutionElements>
+  <resolutionElements name="Obstacle Avoidance DWA Alg" description="Obstacle Avoidance VHF Alg">
+    <transformations xsi:type="Ns_1:ROSTransfImplementation" name="Local Navigation VHF Impl" description="Local Navigation VHF Impl" classNamespace="local_nav2" className="local_navigation_VHF">
+      <targetNode href="local_nav.ros_package#//@node.0"/>
+    </transformations>
+    <feature href="variability.featuremodel#//@rootFeature/@subFeatures.1/@subCompositeFeatures.0/@subFeatures.1"/>
+  </resolutionElements>
+  <resolutionElements name="Camera Model 1" description="Camera Model 1">
+    <transformations xsi:type="Ns_1:ROSTransfProperty" name="Camera Model 1 Prop" description="Camera Model 1 Prop" value="Cam1">
+      <targetProperty href="marker_nav.ros_package#//@node.1/@parameter.0"/>
+    </transformations>
+    <feature href="variability.featuremodel#//@rootFeature/@subFeatures.3/@subCompositeFeatures.0/@subFeatures.0"/>
+  </resolutionElements>
+  <resolutionElements name="Camera Model 2" description="Camera Model 2">
+    <transformations xsi:type="Ns_1:ROSTransfProperty" name="Camera Model 2 Prop" description="Camera Model 2 Prop" value="Cam2">
+      <targetProperty href="marker_nav.ros_package#//@node.1/@parameter.0"/>
+    </transformations>
+    <feature href="variability.featuremodel#//@rootFeature/@subFeatures.3/@subCompositeFeatures.0/@subFeatures.1"/>
+  </resolutionElements>
+</Ns:ResolutionModel>
