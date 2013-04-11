@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Ns:ResolutionModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Ns="http://robotics.unibg.it/resolutionmodels" xmlns:Ns_1="http://robotics.unibg.it/resolutionmodels.ros" name="Fetch and  carry resolution model">
+  <resolutionElements name="Fetch And Carry" description="Fetch And Carry">
+    <requiredComponents xsi:type="Ns_1:ROSRequiredComponents">
+      <ROSNodes href="platform:/resource//component_models/models/planning_environment.ros_package#//@node.0"/>
+      <ROSNodes href="platform:/resource//component_models/models/raw_fetch_and_carry.ros_package#//@node.0"/>
+      <ROSNodes href="platform:/resource//component_models/models/robot_state_publisher.ros_package#//@node.0"/>
+    </requiredComponents>
+    <requiredConnections xsi:type="Ns_1:ROSRequiredConnections">
+      <requiredTopicConnections name="tf state publisher - environment server">
+        <publisher href="platform:/resource//component_models/models/robot_state_publisher.ros_package#//@node.0/@publisher.0"/>
+        <subscriber href="platform:/resource//component_models/models/planning_environment.ros_package#//@node.0/@subscriber.0"/>
+        <topic href="review_meeting.ros_system#//@topic.8"/>
+      </requiredTopicConnections>
+    </requiredConnections>
+    <feature href="review_meeting.featuremodel#//@rootFeature"/>
+  </resolutionElements>
+  <resolutionElements name="Robot Driver" description="Robot Driver">
+    <requiredComponents xsi:type="Ns_1:ROSRequiredComponents">
+      <ROSNodes href="platform:/resource//component_models/models/youbot_oodl.ros_package#//@node.0"/>
+    </requiredComponents>
+    <requiredConnections xsi:type="Ns_1:ROSRequiredConnections">
+      <requiredTopicConnections name="oodl arm - state publisher">
+        <publisher href="platform:/resource//component_models/models/youbot_oodl.ros_package#//@node.0/@publisher.2"/>
+        <subscriber href="platform:/resource//component_models/models/robot_state_publisher.ros_package#//@node.0/@subscriber.0"/>
+        <topic href="review_meeting.ros_system#//@topic.4"/>
+      </requiredTopicConnections>
+      <requiredTopicConnections name="oodl base - state publisher">
+        <publisher href="platform:/resource//component_models/models/youbot_oodl.ros_package#//@node.0/@publisher.1"/>
+        <subscriber href="platform:/resource//component_models/models/robot_state_publisher.ros_package#//@node.0/@subscriber.0"/>
+        <topic href="review_meeting.ros_system#//@topic.5"/>
+      </requiredTopicConnections>
+      <requiredTopicConnections name="base oodl - environment server">
+        <publisher href="platform:/resource//component_models/models/youbot_oodl.ros_package#//@node.0/@publisher.1"/>
+        <subscriber href="platform:/resource//component_models/models/planning_environment.ros_package#//@node.0/@subscriber.1"/>
+        <topic href="review_meeting.ros_system#//@topic.9"/>
+      </requiredTopicConnections>
+      <requiredTopicConnections name="arm oodl - environment server">
+        <publisher href="platform:/resource//component_models/models/youbot_oodl.ros_package#//@node.0/@publisher.2"/>
+        <subscriber href="platform:/resource//component_models/models/planning_environment.ros_package#//@node.0/@subscriber.1"/>
+        <topic href="review_meeting.ros_system#//@topic.10"/>
+      </requiredTopicConnections>
+    </requiredConnections>
+    <feature href="review_meeting.featuremodel#//@rootFeature/@subFeatures.1"/>
+  </resolutionElements>
+  <resolutionElements name="Object Finder" description="Object Finder">
+    <requiredComponents xsi:type="Ns_1:ROSRequiredComponents">
+      <ROSNodes href="platform:/resource//component_models/models/hbrs_object_finder.ros_package#//@node.0"/>
+      <ROSNodes href="platform:/resource//component_models/models/openni_camera.ros_package#//@node.0"/>
+    </requiredComponents>
+    <requiredConnections xsi:type="Ns_1:ROSRequiredConnections">
+      <requiredServiceConnections name="object segmentation - fetch and carry">
+        <serviceServer href="platform:/resource//component_models/models/hbrs_object_finder.ros_package#//@node.0/@serviceServer.0"/>
+        <serviceClient href="platform:/resource//component_models/models/raw_fetch_and_carry.ros_package#//@node.0/@serviceClient.0"/>
+        <service href="review_meeting.ros_system#//@service.1"/>
+      </requiredServiceConnections>
+      <requiredServiceConnections name="objetc segmentation - object manipulation">
+        <serviceServer href="platform:/resource//component_models/models/object_manipulator.ros_package#//@node.0/@serviceServer.0"/>
+        <serviceClient href="platform:/resource//component_models/models/hbrs_object_finder.ros_package#//@node.0/@serviceClient.0"/>
+        <service href="review_meeting.ros_system#//@service.0"/>
+      </requiredServiceConnections>
+    </requiredConnections>
+    <feature href="review_meeting.featuremodel#//@rootFeature/@subFeatures.2/@subCompositeFeatures.0/@subFeatures.1"/>
+  </resolutionElements>
+  <resolutionElements name="ROI Filter" description="ROI Filter">
+    <transformations xsi:type="Ns_1:ROSTransfConnection" name="Filter connections">
+      <newConnections xsi:type="Ns_1:ROSNewTopicConnection" name="camera - filter" topicName="/raw_image">
+        <publisher href="platform:/resource//component_models/models/openni_camera.ros_package#//@node.0/@publisher.0"/>
+        <subscriber href="../../brics_3d_bride_filtering_roi/model/brics_3d_filter_roi.ros_package#//@node.0/@subscriber.0"/>
+      </newConnections>
+      <newConnections xsi:type="Ns_1:ROSNewTopicConnection" name="filter - obj seg" topicName="/filtered_image">
+        <publisher href="../../brics_3d_bride_filtering_roi/model/brics_3d_filter_roi.ros_package#//@node.0/@publisher.0"/>
+        <subscriber href="platform:/resource//component_models/models/hbrs_object_finder.ros_package#//@node.0/@subscriber.0"/>
+      </newConnections>
+    </transformations>
+    <requiredComponents xsi:type="Ns_1:ROSRequiredComponents">
+      <ROSNodes href="../../brics_3d_bride_filtering_roi/model/brics_3d_filter_roi.ros_package#//@node.0"/>
+    </requiredComponents>
+    <feature href="review_meeting.featuremodel#//@rootFeature/@subFeatures.2/@subCompositeFeatures.0/@subFeatures.0"/>
+  </resolutionElements>
+  <resolutionElements name="NO Filter" description="NO Filter" executedWhenFeatureIsSelected="false">
+    <requiredConnections xsi:type="Ns_1:ROSRequiredConnections">
+      <requiredTopicConnections name="camera - obj seg">
+        <publisher href="platform:/resource//component_models/models/openni_camera.ros_package#//@node.0/@publisher.0"/>
+        <subscriber href="platform:/resource//component_models/models/hbrs_object_finder.ros_package#//@node.0/@subscriber.0"/>
+        <topic href="review_meeting.ros_system#//@topic.0"/>
+      </requiredTopicConnections>
+    </requiredConnections>
+    <feature href="review_meeting.featuremodel#//@rootFeature/@subFeatures.2/@subCompositeFeatures.0/@subFeatures.0"/>
+  </resolutionElements>
+  <resolutionElements name="Localization" description="Localization">
+    <requiredComponents xsi:type="Ns_1:ROSRequiredComponents">
+      <ROSNodes href="platform:/resource//component_models/models/amcl.ros_package#//@node.0"/>
+    </requiredComponents>
+    <requiredConnections xsi:type="Ns_1:ROSRequiredConnections">
+      <requiredTopicConnections name="hokuyo - amcl">
+        <publisher href="platform:/resource//component_models/models/hokuyo_node.ros_package#//@node.0/@publisher.0"/>
+        <subscriber href="platform:/resource//component_models/models/amcl.ros_package#//@node.0/@subscriber.2"/>
+        <topic href="review_meeting.ros_system#//@topic.1"/>
+      </requiredTopicConnections>
+      <requiredTopicConnections name="amcl - robot state">
+        <publisher href="platform:/resource//component_models/models/robot_state_publisher.ros_package#//@node.0/@publisher.0"/>
+        <subscriber href="platform:/resource//component_models/models/amcl.ros_package#//@node.0/@subscriber.1"/>
+        <topic href="review_meeting.ros_system#//@topic.3"/>
+      </requiredTopicConnections>
+    </requiredConnections>
+    <feature href="review_meeting.featuremodel#//@rootFeature/@subFeatures.1/@subCompositeFeatures.0/@subFeatures.0"/>
+  </resolutionElements>
+  <resolutionElements name="Locomotion" description="Locomotion">
+    <requiredComponents xsi:type="Ns_1:ROSRequiredComponents">
+      <ROSNodes href="platform:/resource//component_models/models/raw_2dnav.ros_package#//@node.0"/>
+      <ROSNodes href="platform:/resource//component_models/models/raw_base_placement.ros_package#//@node.1"/>
+      <ROSNodes href="platform:/resource//component_models/models/raw_base_placement.ros_package#//@node.0"/>
+      <ROSNodes href="platform:/resource//component_models/models/map_server.ros_package#//@node.0"/>
+      <ROSNodes href="platform:/resource//component_models/models/hokuyo_node.ros_package#//@node.0"/>
+    </requiredComponents>
+    <requiredConnections xsi:type="Ns_1:ROSRequiredConnections">
+      <requiredTopicConnections name="hokuyo - placement">
+        <publisher href="platform:/resource//component_models/models/hokuyo_node.ros_package#//@node.0/@publisher.0"/>
+        <subscriber href="platform:/resource//component_models/models/raw_base_placement.ros_package#//@node.1/@subscriber.0"/>
+        <topic href="review_meeting.ros_system#//@topic.22"/>
+      </requiredTopicConnections>
+      <requiredTopicConnections name="map server - move base">
+        <publisher href="platform:/resource//component_models/models/map_server.ros_package#//@node.0/@publisher.0"/>
+        <subscriber href="platform:/resource//component_models/models/raw_2dnav.ros_package#//@node.0/@subscriber.2"/>
+        <topic href="review_meeting.ros_system#//@topic.2"/>
+      </requiredTopicConnections>
+      <requiredTopicConnections name="tf move base - state publisher">
+        <publisher href="platform:/resource//component_models/models/robot_state_publisher.ros_package#//@node.0/@publisher.0"/>
+        <subscriber href="platform:/resource//component_models/models/raw_2dnav.ros_package#//@node.0/@subscriber.0"/>
+        <topic href="review_meeting.ros_system#//@topic.11"/>
+      </requiredTopicConnections>
+      <requiredTopicConnections name="cmdl vel oodl - move base">
+        <publisher href="platform:/resource//component_models/models/raw_2dnav.ros_package#//@node.0/@publisher.0"/>
+        <subscriber href="platform:/resource//component_models/models/youbot_oodl.ros_package#//@node.0/@subscriber.0"/>
+        <topic href="review_meeting.ros_system#//@topic.12"/>
+      </requiredTopicConnections>
+      <requiredTopicConnections name="odom oodl - move base">
+        <publisher href="platform:/resource//component_models/models/youbot_oodl.ros_package#//@node.0/@publisher.0"/>
+        <subscriber href="platform:/resource//component_models/models/raw_2dnav.ros_package#//@node.0/@subscriber.1"/>
+        <topic href="review_meeting.ros_system#//@topic.13"/>
+      </requiredTopicConnections>
+      <requiredTopicConnections name="oodl - placement wrt action server">
+        <publisher href="platform:/resource//component_models/models/raw_base_placement.ros_package#//@node.0/@publisher.0"/>
+        <subscriber href="platform:/resource//component_models/models/youbot_oodl.ros_package#//@node.0/@subscriber.0"/>
+        <topic href="review_meeting.ros_system#//@topic.23"/>
+      </requiredTopicConnections>
+      <requiredServiceConnections name="linear regression">
+        <serviceServer href="platform:/resource//component_models/models/raw_base_placement.ros_package#//@node.1/@serviceServer.0"/>
+        <serviceClient href="platform:/resource//component_models/models/raw_base_placement.ros_package#//@node.0/@serviceClient.0"/>
+        <service href="review_meeting.ros_system#//@service.2"/>
+      </requiredServiceConnections>
+      <requiredActionConnections name="fetch and carry - move base adapted">
+        <actionServer href="platform:/resource//component_models/models/raw_2dnav.ros_package#//@node.0/@actionserver.0"/>
+        <actionClient href="platform:/resource//component_models/models/raw_fetch_and_carry.ros_package#//@node.0/@actionclient.0"/>
+        <action href="review_meeting.ros_system#//@action.4"/>
+      </requiredActionConnections>
+      <requiredActionConnections name="fetch and carry - placement wrt workspace action server">
+        <actionServer href="platform:/resource//component_models/models/raw_base_placement.ros_package#//@node.0/@actionserver.0"/>
+        <actionClient href="platform:/resource//component_models/models/raw_fetch_and_carry.ros_package#//@node.0/@actionclient.4"/>
+        <action href="review_meeting.ros_system#//@action.0"/>
+      </requiredActionConnections>
+    </requiredConnections>
+    <feature href="review_meeting.featuremodel#//@rootFeature/@subFeatures.1/@subCompositeFeatures.0/@subFeatures.1"/>
+  </resolutionElements>
+  <resolutionElements name="Traj. Gen and Exec." description="Traj. Gen and Exec.">
+    <requiredComponents xsi:type="Ns_1:ROSRequiredComponents">
+      <ROSNodes href="platform:/resource//component_models/models/arm_kinematics_constraint_aware.ros_package#//@node.0"/>
+      <ROSNodes href="platform:/resource//component_models/models/raw_move_arm_cart.ros_package#//@node.0"/>
+      <ROSNodes href="platform:/resource//component_models/models/youbot_joint_trajectory_action.ros_package#//@node.0"/>
+      <ROSNodes href="platform:/resource//component_models/models/youbot_joint_trajectory_action.ros_package#//@node.1"/>
+    </requiredComponents>
+    <requiredConnections xsi:type="Ns_1:ROSRequiredConnections">
+      <requiredTopicConnections name="base oodl - akcw">
+        <publisher href="platform:/resource//component_models/models/youbot_oodl.ros_package#//@node.0/@publisher.1"/>
+        <subscriber href="platform:/resource//component_models/models/arm_kinematics_constraint_aware.ros_package#//@node.0/@subscriber.0"/>
+        <topic href="review_meeting.ros_system#//@topic.6"/>
+      </requiredTopicConnections>
+      <requiredTopicConnections name="arm oodl - akcw">
+        <publisher href="platform:/resource//component_models/models/youbot_oodl.ros_package#//@node.0/@publisher.2"/>
+        <subscriber href="platform:/resource//component_models/models/arm_kinematics_constraint_aware.ros_package#//@node.0/@subscriber.0"/>
+        <topic href="review_meeting.ros_system#//@topic.7"/>
+      </requiredTopicConnections>
+      <requiredTopicConnections name="arm oodl - move arm">
+        <publisher href="platform:/resource//component_models/models/youbot_oodl.ros_package#//@node.0/@publisher.2"/>
+        <subscriber href="platform:/resource//component_models/models/raw_move_arm_cart.ros_package#//@node.0/@subscriber.0"/>
+        <topic href="review_meeting.ros_system#//@topic.14"/>
+      </requiredTopicConnections>
+      <requiredTopicConnections name="base oodl - move arm">
+        <publisher href="platform:/resource//component_models/models/youbot_oodl.ros_package#//@node.0/@publisher.1"/>
+        <subscriber href="platform:/resource//component_models/models/raw_move_arm_cart.ros_package#//@node.0/@subscriber.0"/>
+        <topic href="review_meeting.ros_system#//@topic.15"/>
+      </requiredTopicConnections>
+      <requiredTopicConnections name="base oodl - arm trj">
+        <publisher href="platform:/resource//component_models/models/youbot_oodl.ros_package#//@node.0/@publisher.1"/>
+        <subscriber href="platform:/resource//component_models/models/youbot_joint_trajectory_action.ros_package#//@node.0/@subscriber.0"/>
+        <topic href="review_meeting.ros_system#//@topic.17"/>
+      </requiredTopicConnections>
+      <requiredTopicConnections name="arm oodl - arm trj">
+        <publisher href="platform:/resource//component_models/models/youbot_oodl.ros_package#//@node.0/@publisher.2"/>
+        <subscriber href="platform:/resource//component_models/models/youbot_joint_trajectory_action.ros_package#//@node.0/@subscriber.0"/>
+        <topic href="review_meeting.ros_system#//@topic.16"/>
+      </requiredTopicConnections>
+      <requiredTopicConnections name="base oodl - gripper trj">
+        <publisher href="platform:/resource//component_models/models/youbot_oodl.ros_package#//@node.0/@publisher.1"/>
+        <subscriber href="platform:/resource//component_models/models/youbot_joint_trajectory_action.ros_package#//@node.1/@subscriber.0"/>
+        <topic href="review_meeting.ros_system#//@topic.19"/>
+      </requiredTopicConnections>
+      <requiredTopicConnections name="arm oodl - gripper trj">
+        <publisher href="platform:/resource//component_models/models/youbot_oodl.ros_package#//@node.0/@publisher.2"/>
+        <subscriber href="platform:/resource//component_models/models/youbot_joint_trajectory_action.ros_package#//@node.1/@subscriber.0"/>
+        <topic href="review_meeting.ros_system#//@topic.18"/>
+      </requiredTopicConnections>
+      <requiredTopicConnections name="arm joint trj - oodl">
+        <publisher href="platform:/resource//component_models/models/youbot_joint_trajectory_action.ros_package#//@node.0/@publisher.0"/>
+        <subscriber href="platform:/resource//component_models/models/youbot_oodl.ros_package#//@node.0/@subscriber.1"/>
+        <topic href="review_meeting.ros_system#//@topic.20"/>
+      </requiredTopicConnections>
+      <requiredTopicConnections name="gripper joint trj - oodl">
+        <publisher href="platform:/resource//component_models/models/youbot_joint_trajectory_action.ros_package#//@node.1/@publisher.0"/>
+        <subscriber href="platform:/resource//component_models/models/youbot_oodl.ros_package#//@node.0/@subscriber.3"/>
+        <topic href="review_meeting.ros_system#//@topic.21"/>
+      </requiredTopicConnections>
+      <requiredActionConnections name="fetch and carry - move arm cart action server">
+        <actionServer href="platform:/resource//component_models/models/raw_move_arm_cart.ros_package#//@node.0/@actionserver.0"/>
+        <actionClient href="platform:/resource//component_models/models/raw_fetch_and_carry.ros_package#//@node.0/@actionclient.2"/>
+        <action href="review_meeting.ros_system#//@action.3"/>
+      </requiredActionConnections>
+      <requiredActionConnections name="gripper trj - move arm">
+        <actionServer href="platform:/resource//component_models/models/youbot_joint_trajectory_action.ros_package#//@node.1/@actionserver.0"/>
+        <actionClient href="platform:/resource//component_models/models/raw_move_arm_cart.ros_package#//@node.0/@actionclient.1"/>
+        <action href="review_meeting.ros_system#//@action.2"/>
+      </requiredActionConnections>
+      <requiredActionConnections name="joint trj - move arm">
+        <actionServer href="platform:/resource//component_models/models/youbot_joint_trajectory_action.ros_package#//@node.1/@actionserver.0"/>
+        <actionClient href="platform:/resource//component_models/models/raw_move_arm_cart.ros_package#//@node.0/@actionclient.0"/>
+        <action href="review_meeting.ros_system#//@action.1"/>
+      </requiredActionConnections>
+    </requiredConnections>
+    <feature href="review_meeting.featuremodel#//@rootFeature/@subFeatures.3/@subCompositeFeatures.0/@subFeatures.0"/>
+  </resolutionElements>
+  <resolutionElements name="Object Manipulation" description="Object Manipulation">
+    <requiredComponents xsi:type="Ns_1:ROSRequiredComponents">
+      <ROSNodes href="platform:/resource//component_models/models/object_manipulator.ros_package#//@node.0"/>
+    </requiredComponents>
+    <feature href="review_meeting.featuremodel#//@rootFeature/@subFeatures.3/@subCompositeFeatures.0/@subFeatures.1"/>
+  </resolutionElements>
+</Ns:ResolutionModel>
