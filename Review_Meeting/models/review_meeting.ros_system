@@ -12,43 +12,43 @@
     <publisher href="platform:/resource//component_models/models/map_server.ros_package#//@node.0/@publisher.0"/>
     <subscriber href="platform:/resource//component_models/models/raw_2dnav.ros_package#//@node.0/@subscriber.2"/>
   </topic>
-  <topic name="/tf_amcl_robot_state">
+  <topic name="/tf">
     <publisher href="platform:/resource//component_models/models/robot_state_publisher.ros_package#//@node.0/@publisher.0"/>
     <subscriber href="platform:/resource//component_models/models/amcl.ros_package#//@node.0/@subscriber.1"/>
   </topic>
-  <topic name="/joint_states_arm_oodl_state_pub">
+  <topic name="/joint_states">
     <publisher href="platform:/resource//component_models/models/youbot_oodl.ros_package#//@node.0/@publisher.2"/>
     <subscriber href="platform:/resource//component_models/models/robot_state_publisher.ros_package#//@node.0/@subscriber.0"/>
   </topic>
-  <topic name="/joint_states_base_oodl_state_pub">
+  <topic name="/joint_states">
     <publisher href="platform:/resource//component_models/models/youbot_oodl.ros_package#//@node.0/@publisher.1"/>
     <subscriber href="platform:/resource//component_models/models/robot_state_publisher.ros_package#//@node.0/@subscriber.0"/>
   </topic>
-  <topic name="/joint_states_base_oodl_akcw">
+  <topic name="/joint_states">
     <publisher href="platform:/resource//component_models/models/youbot_oodl.ros_package#//@node.0/@publisher.1"/>
     <subscriber href="platform:/resource//component_models/models/arm_kinematics_constraint_aware.ros_package#//@node.0/@subscriber.0"/>
   </topic>
-  <topic name="/joint_states_arm_oodl_akcw">
+  <topic name="/joint_states">
     <publisher href="platform:/resource//component_models/models/youbot_oodl.ros_package#//@node.0/@publisher.2"/>
     <subscriber href="platform:/resource//component_models/models/arm_kinematics_constraint_aware.ros_package#//@node.0/@subscriber.0"/>
   </topic>
-  <topic name="/tf_state_pub_enviro_server">
+  <topic name="/tf">
     <publisher href="platform:/resource//component_models/models/robot_state_publisher.ros_package#//@node.0/@publisher.0"/>
     <subscriber href="platform:/resource//component_models/models/planning_environment.ros_package#//@node.0/@subscriber.0"/>
   </topic>
-  <topic name="/joint_states_base_oodl_env_serv">
+  <topic name="/joint_states">
     <publisher href="platform:/resource//component_models/models/youbot_oodl.ros_package#//@node.0/@publisher.1"/>
     <subscriber href="platform:/resource//component_models/models/planning_environment.ros_package#//@node.0/@subscriber.1"/>
   </topic>
-  <topic name="/joint_states_arm_oodl_env_serv">
+  <topic name="/joint_states">
     <publisher href="platform:/resource//component_models/models/youbot_oodl.ros_package#//@node.0/@publisher.2"/>
     <subscriber href="platform:/resource//component_models/models/planning_environment.ros_package#//@node.0/@subscriber.1"/>
   </topic>
-  <topic name="/tf_state_pub_move_base">
+  <topic name="/tf">
     <publisher href="platform:/resource//component_models/models/robot_state_publisher.ros_package#//@node.0/@publisher.0"/>
     <subscriber href="platform:/resource//component_models/models/raw_2dnav.ros_package#//@node.0/@subscriber.0"/>
   </topic>
-  <topic name="/cmd_vel_move_base_oodl">
+  <topic name="/cmd_vel">
     <publisher href="platform:/resource//component_models/models/raw_2dnav.ros_package#//@node.0/@publisher.0"/>
     <subscriber href="platform:/resource//component_models/models/youbot_oodl.ros_package#//@node.0/@subscriber.0"/>
   </topic>
@@ -56,27 +56,27 @@
     <publisher href="platform:/resource//component_models/models/youbot_oodl.ros_package#//@node.0/@publisher.0"/>
     <subscriber href="platform:/resource//component_models/models/raw_2dnav.ros_package#//@node.0/@subscriber.1"/>
   </topic>
-  <topic name="/joint_states_arm_oodl_move_arm_cart">
+  <topic name="/joint_states">
     <publisher href="platform:/resource//component_models/models/youbot_oodl.ros_package#//@node.0/@publisher.2"/>
     <subscriber href="platform:/resource//component_models/models/raw_move_arm_cart.ros_package#//@node.0/@subscriber.0"/>
   </topic>
-  <topic name="/joint_states_base_oodl_move_arm_cart">
+  <topic name="/joint_states">
     <publisher href="platform:/resource//component_models/models/youbot_oodl.ros_package#//@node.0/@publisher.1"/>
     <subscriber href="platform:/resource//component_models/models/raw_move_arm_cart.ros_package#//@node.0/@subscriber.0"/>
   </topic>
-  <topic name="/joint_states_arm_oodl_arm_joint_trj">
+  <topic name="/joint_states">
     <publisher href="platform:/resource//component_models/models/youbot_oodl.ros_package#//@node.0/@publisher.2"/>
     <subscriber href="platform:/resource//component_models/models/youbot_joint_trajectory_action.ros_package#//@node.0/@subscriber.0"/>
   </topic>
-  <topic name="/joint_states_base_oodl_arm_joint_trj">
+  <topic name="/joint_states">
     <publisher href="platform:/resource//component_models/models/youbot_oodl.ros_package#//@node.0/@publisher.1"/>
     <subscriber href="platform:/resource//component_models/models/youbot_joint_trajectory_action.ros_package#//@node.0/@subscriber.0"/>
   </topic>
-  <topic name="/joint_states_arm_oodl_gripper_joint_trj">
+  <topic name="/joint_states">
     <publisher href="platform:/resource//component_models/models/youbot_oodl.ros_package#//@node.0/@publisher.2"/>
     <subscriber href="platform:/resource//component_models/models/youbot_joint_trajectory_action.ros_package#//@node.1/@subscriber.0"/>
   </topic>
-  <topic name="/joint_states_base_oodl_gripper_joint_trj">
+  <topic name="/joint_states">
     <publisher href="platform:/resource//component_models/models/youbot_oodl.ros_package#//@node.0/@publisher.1"/>
     <subscriber href="platform:/resource//component_models/models/youbot_joint_trajectory_action.ros_package#//@node.1/@subscriber.0"/>
   </topic>
@@ -92,7 +92,7 @@
     <publisher href="platform:/resource//component_models/models/hokuyo_node.ros_package#//@node.0/@publisher.0"/>
     <subscriber href="platform:/resource//component_models/models/raw_base_placement.ros_package#//@node.1/@subscriber.0"/>
   </topic>
-  <topic name="/cmd_vel_oodl_placement_wrt_action_srv">
+  <topic name="/cmd_vel">
     <publisher href="platform:/resource//component_models/models/raw_base_placement.ros_package#//@node.0/@publisher.0"/>
     <subscriber href="platform:/resource//component_models/models/youbot_oodl.ros_package#//@node.0/@subscriber.0"/>
   </topic>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Ns:ResolutionModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Ns="http://robotics.unibg.it/resolutionmodels" xmlns:Ns_1="http://robotics.unibg.it/resolutionmodels.ros" name="Fetch and  carry resolution model">
+<Ns:ResolutionModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Ns="http://robotics.unibg.it/resolutionmodels" xmlns:Ns_1="http://robotics.unibg.it/resolutionmodels.ros" name="Fetch and carry resolution model">
   <resolutionElements name="Fetch And Carry" description="Fetch And Carry">
     <requiredComponents xsi:type="Ns_1:ROSRequiredComponents">
       <ROSNodes href="platform:/resource//component_models/models/planning_environment.ros_package#//@node.0"/>
@@ -64,11 +64,11 @@
   </resolutionElements>
   <resolutionElements name="ROI Filter" description="ROI Filter">
     <transformations xsi:type="Ns_1:ROSTransfConnection" name="Filter connections">
-      <newConnections xsi:type="Ns_1:ROSNewTopicConnection" name="camera - filter" topicName="/raw_image">
+      <newConnections xsi:type="Ns_1:ROSNewTopicConnection" name="camera - filter" topicName="/cam3d_cloud">
         <publisher href="platform:/resource//component_models/models/openni_camera.ros_package#//@node.0/@publisher.0"/>
         <subscriber href="../../brics_3d_bride_filtering_roi/model/brics_3d_filter_roi.ros_package#//@node.0/@subscriber.0"/>
       </newConnections>
-      <newConnections xsi:type="Ns_1:ROSNewTopicConnection" name="filter - obj seg" topicName="/filtered_image">
+      <newConnections xsi:type="Ns_1:ROSNewTopicConnection" name="filter - obj seg" topicName="/filtered_cloud">
         <publisher href="../../brics_3d_bride_filtering_roi/model/brics_3d_filter_roi.ros_package#//@node.0/@publisher.0"/>
         <subscriber href="platform:/resource//component_models/models/hbrs_object_finder.ros_package#//@node.0/@subscriber.0"/>
       </newConnections>
