@@ -24,7 +24,7 @@
     <requiredComponents xsi:type="Ns_1:RTTRequiredComponents">
       <RTTTaskContexts href="navigation.rtt#//@taskContext.2"/>
     </requiredComponents>
-    <feature href="navigation.featuremodel#//@rootFeature/@subFeatures.2/@subCompositeFeatures.0/@subFeatures.0"/>
+    <feature href="navigation.featuremodel#//@rootFeature/@subFeatures.2/@containers.0/@subFeatures.0"/>
   </resolutionElements>
   <resolutionElements name="MarkerBased" description="MarkerBased">
     <transformations xsi:type="Ns_1:RTTTransfConnection" name="MN_LN_Path" description="MN_LN_Path">
@@ -40,30 +40,30 @@
     <requiredConnections xsi:type="Ns_1:RTTRequiredConnections">
       <RTTConnectionPolicies href="navigation.rtt#//@connectionPolicy.2"/>
     </requiredConnections>
-    <feature href="navigation.featuremodel#//@rootFeature/@subFeatures.2/@subCompositeFeatures.0/@subFeatures.1"/>
+    <feature href="navigation.featuremodel#//@rootFeature/@subFeatures.2/@containers.0/@subFeatures.1"/>
   </resolutionElements>
   <resolutionElements name="DWAObstacleAvoidance" description="DWAObstacleAvoidance">
     <transformations xsi:type="Ns_1:RTTTransfImplementation" name="DWAImplementation" description="DWAImplementation" classNamespace="BRICS_RN" className="DWA">
       <targetTaskContext href="navigation.rtt#//@taskContext.0"/>
     </transformations>
-    <feature href="navigation.featuremodel#//@rootFeature/@subFeatures.0/@subCompositeFeatures.0/@subFeatures.0"/>
+    <feature href="navigation.featuremodel#//@rootFeature/@subFeatures.0/@containers.0/@subFeatures.0"/>
   </resolutionElements>
   <resolutionElements name="VHFObstacleAvoidance" description="VHFObstacleAvoidance">
     <transformations xsi:type="Ns_1:RTTTransfImplementation" name="VHFImplementation" description="VHFImplementation" classNamespace="BRICS_RN" className="VHF">
       <targetTaskContext href="navigation.rtt#//@taskContext.0"/>
     </transformations>
-    <feature href="navigation.featuremodel#//@rootFeature/@subFeatures.0/@subCompositeFeatures.0/@subFeatures.1"/>
+    <feature href="navigation.featuremodel#//@rootFeature/@subFeatures.0/@containers.0/@subFeatures.1"/>
   </resolutionElements>
   <resolutionElements name="CameraModel1" description="CameraModel1">
     <transformations xsi:type="Ns_1:RTTTransfProperty" name="Camera1Model" description="Camera1Model" value="Camera1">
       <targetProperty href="navigation.rtt#//@taskContext.4/@property.0"/>
     </transformations>
-    <feature href="navigation.featuremodel#//@rootFeature/@subFeatures.1/@subCompositeFeatures.0/@subFeatures.0"/>
+    <feature href="navigation.featuremodel#//@rootFeature/@subFeatures.1/@containers.0/@subFeatures.0"/>
   </resolutionElements>
   <resolutionElements name="CameraModel2" description="CameraModel2">
     <transformations xsi:type="Ns_1:RTTTransfProperty" name="Camera2Model" description="Camera2Model" value="Camera2">
       <targetProperty href="navigation.rtt#//@taskContext.4/@property.0"/>
     </transformations>
-    <feature href="navigation.featuremodel#//@rootFeature/@subFeatures.1/@subCompositeFeatures.0/@subFeatures.1"/>
+    <feature href="navigation.featuremodel#//@rootFeature/@subFeatures.1/@containers.0/@subFeatures.1"/>
   </resolutionElements>
 </Ns:ResolutionModel>

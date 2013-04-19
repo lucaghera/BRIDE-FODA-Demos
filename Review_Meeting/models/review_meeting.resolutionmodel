@@ -60,7 +60,7 @@
         <service href="review_meeting.ros_system#//@service.0"/>
       </requiredServiceConnections>
     </requiredConnections>
-    <feature href="review_meeting.featuremodel#//@rootFeature/@subFeatures.2/@subCompositeFeatures.0/@subFeatures.1"/>
+    <feature href="review_meeting.featuremodel#//@rootFeature/@subFeatures.2/@containers.0/@subFeatures.1"/>
   </resolutionElements>
   <resolutionElements name="ROI Filter" description="ROI Filter">
     <transformations xsi:type="Ns_1:ROSTransfConnection" name="Filter connections">
@@ -76,7 +76,7 @@
     <requiredComponents xsi:type="Ns_1:ROSRequiredComponents">
       <ROSNodes href="../../brics_3d_bride_filtering_roi/model/brics_3d_filter_roi.ros_package#//@node.0"/>
     </requiredComponents>
-    <feature href="review_meeting.featuremodel#//@rootFeature/@subFeatures.2/@subCompositeFeatures.0/@subFeatures.0"/>
+    <feature href="review_meeting.featuremodel#//@rootFeature/@subFeatures.2/@containers.0/@subFeatures.0"/>
   </resolutionElements>
   <resolutionElements name="NO Filter" description="NO Filter" executedWhenFeatureIsSelected="false">
     <requiredConnections xsi:type="Ns_1:ROSRequiredConnections">
@@ -86,7 +86,7 @@
         <topic href="review_meeting.ros_system#//@topic.0"/>
       </requiredTopicConnections>
     </requiredConnections>
-    <feature href="review_meeting.featuremodel#//@rootFeature/@subFeatures.2/@subCompositeFeatures.0/@subFeatures.0"/>
+    <feature href="review_meeting.featuremodel#//@rootFeature/@subFeatures.2/@containers.0/@subFeatures.0"/>
   </resolutionElements>
   <resolutionElements name="Localization" description="Localization">
     <requiredComponents xsi:type="Ns_1:ROSRequiredComponents">
@@ -104,7 +104,7 @@
         <topic href="review_meeting.ros_system#//@topic.3"/>
       </requiredTopicConnections>
     </requiredConnections>
-    <feature href="review_meeting.featuremodel#//@rootFeature/@subFeatures.1/@subCompositeFeatures.0/@subFeatures.0"/>
+    <feature href="review_meeting.featuremodel#//@rootFeature/@subFeatures.1/@containers.0/@subFeatures.0"/>
   </resolutionElements>
   <resolutionElements name="Locomotion" description="Locomotion">
     <requiredComponents xsi:type="Ns_1:ROSRequiredComponents">
@@ -161,7 +161,7 @@
         <action href="review_meeting.ros_system#//@action.0"/>
       </requiredActionConnections>
     </requiredConnections>
-    <feature href="review_meeting.featuremodel#//@rootFeature/@subFeatures.1/@subCompositeFeatures.0/@subFeatures.1"/>
+    <feature href="review_meeting.featuremodel#//@rootFeature/@subFeatures.1/@containers.0/@subFeatures.1"/>
   </resolutionElements>
   <resolutionElements name="Traj. Gen and Exec." description="Traj. Gen and Exec.">
     <requiredComponents xsi:type="Ns_1:ROSRequiredComponents">
@@ -237,12 +237,12 @@
         <action href="review_meeting.ros_system#//@action.1"/>
       </requiredActionConnections>
     </requiredConnections>
-    <feature href="review_meeting.featuremodel#//@rootFeature/@subFeatures.3/@subCompositeFeatures.0/@subFeatures.0"/>
+    <feature href="review_meeting.featuremodel#//@rootFeature/@subFeatures.3/@containers.0/@subFeatures.0"/>
   </resolutionElements>
   <resolutionElements name="Object Manipulation" description="Object Manipulation">
     <requiredComponents xsi:type="Ns_1:ROSRequiredComponents">
       <ROSNodes href="platform:/resource//component_models/models/object_manipulator.ros_package#//@node.0"/>
     </requiredComponents>
-    <feature href="review_meeting.featuremodel#//@rootFeature/@subFeatures.3/@subCompositeFeatures.0/@subFeatures.1"/>
+    <feature href="review_meeting.featuremodel#//@rootFeature/@subFeatures.3/@containers.0/@subFeatures.1"/>
   </resolutionElements>
 </Ns:ResolutionModel>

@@ -3,24 +3,24 @@
   <rootFeature name="Fetch and Carry" root="true" required="true">
     <subFeatures name="YouBot Driver" required="true"/>
     <subFeatures name="Navigation" required="true">
-      <subCompositeFeatures>
+      <containers>
         <subFeatures name="Localization" required="true"/>
         <subFeatures name="Locomotion" required="true"/>
-      </subCompositeFeatures>
+      </containers>
     </subFeatures>
     <subFeatures name="Perception" required="true">
-      <subCompositeFeatures>
+      <containers>
         <subFeatures name="Filter"/>
         <subFeatures name="Object Detection" required="true"/>
-      </subCompositeFeatures>
+      </containers>
     </subFeatures>
     <subFeatures name="Manipulation" required="true">
-      <subCompositeFeatures>
+      <containers>
         <subFeatures name="Trajectory Generation &amp; Execution" required="true"/>
         <subFeatures name="Object Manipulation" required="true"/>
-      </subCompositeFeatures>
+      </containers>
     </subFeatures>
   </rootFeature>
-  <instances id="Perception with filter" descritpion="ROI Filter enabled" selectedFeatures="//@rootFeature //@rootFeature/@subFeatures.0 //@rootFeature/@subFeatures.1 //@rootFeature/@subFeatures.1/@subCompositeFeatures.0/@subFeatures.0 //@rootFeature/@subFeatures.1/@subCompositeFeatures.0/@subFeatures.1 //@rootFeature/@subFeatures.2 //@rootFeature/@subFeatures.2/@subCompositeFeatures.0/@subFeatures.1 //@rootFeature/@subFeatures.3 //@rootFeature/@subFeatures.3/@subCompositeFeatures.0/@subFeatures.0 //@rootFeature/@subFeatures.3/@subCompositeFeatures.0/@subFeatures.1 //@rootFeature/@subFeatures.2/@subCompositeFeatures.0/@subFeatures.0"/>
-  <instances id="Perception without filter" descritpion="NO Filter" selectedFeatures="//@rootFeature //@rootFeature/@subFeatures.0 //@rootFeature/@subFeatures.1 //@rootFeature/@subFeatures.1/@subCompositeFeatures.0/@subFeatures.0 //@rootFeature/@subFeatures.1/@subCompositeFeatures.0/@subFeatures.1 //@rootFeature/@subFeatures.2 //@rootFeature/@subFeatures.2/@subCompositeFeatures.0/@subFeatures.1 //@rootFeature/@subFeatures.3 //@rootFeature/@subFeatures.3/@subCompositeFeatures.0/@subFeatures.0 //@rootFeature/@subFeatures.3/@subCompositeFeatures.0/@subFeatures.1"/>
+  <instances id="Perception with filter" descritpion="ROI Filter enabled" selectedFeatures="//@rootFeature //@rootFeature/@subFeatures.0 //@rootFeature/@subFeatures.1 //@rootFeature/@subFeatures.1/@containers.0/@subFeatures.0 //@rootFeature/@subFeatures.1/@containers.0/@subFeatures.1 //@rootFeature/@subFeatures.2 //@rootFeature/@subFeatures.2/@containers.0/@subFeatures.1 //@rootFeature/@subFeatures.3 //@rootFeature/@subFeatures.3/@containers.0/@subFeatures.0 //@rootFeature/@subFeatures.3/@containers.0/@subFeatures.1 //@rootFeature/@subFeatures.2/@containers.0/@subFeatures.0"/>
+  <instances id="Perception without filter" descritpion="NO Filter" selectedFeatures="//@rootFeature //@rootFeature/@subFeatures.0 //@rootFeature/@subFeatures.1 //@rootFeature/@subFeatures.1/@containers.0/@subFeatures.0 //@rootFeature/@subFeatures.1/@containers.0/@subFeatures.1 //@rootFeature/@subFeatures.2 //@rootFeature/@subFeatures.2/@containers.0/@subFeatures.1 //@rootFeature/@subFeatures.3 //@rootFeature/@subFeatures.3/@containers.0/@subFeatures.0 //@rootFeature/@subFeatures.3/@containers.0/@subFeatures.1"/>
 </Ns:FeatureModel>

@@ -3,24 +3,25 @@
   <rootFeature name="Navigation" root="true" required="true">
     <subFeatures name="Local Nav" required="true"/>
     <subFeatures name="Obstacle Av" required="true">
-      <subCompositeFeatures upperBound="1">
+      <containers upperBound="1">
         <subFeatures name="DWA"/>
         <subFeatures name="VHF"/>
-      </subCompositeFeatures>
+      </containers>
     </subFeatures>
     <subFeatures name="Strategy" required="true">
-      <subCompositeFeatures>
+      <containers>
         <subFeatures name="Marker"/>
         <subFeatures name="Map"/>
-      </subCompositeFeatures>
+      </containers>
     </subFeatures>
     <subFeatures name="Camera Model">
-      <subCompositeFeatures upperBound="1">
+      <containers upperBound="1">
         <subFeatures name="Cam1"/>
         <subFeatures name="Cam2"/>
-      </subCompositeFeatures>
+      </containers>
     </subFeatures>
   </rootFeature>
-  <instances id="Map Based" descritpion="Map + DWA" selectedFeatures="//@rootFeature //@rootFeature/@subFeatures.0 //@rootFeature/@subFeatures.1 //@rootFeature/@subFeatures.2 //@rootFeature/@subFeatures.1/@subCompositeFeatures.0/@subFeatures.0 //@rootFeature/@subFeatures.2/@subCompositeFeatures.0/@subFeatures.1"/>
-  <instances id="Marker Based" descritpion="Marker + VHF + Camera 2" selectedFeatures="//@rootFeature //@rootFeature/@subFeatures.0 //@rootFeature/@subFeatures.1 //@rootFeature/@subFeatures.2 //@rootFeature/@subFeatures.2/@subCompositeFeatures.0/@subFeatures.0 //@rootFeature/@subFeatures.1/@subCompositeFeatures.0/@subFeatures.1 //@rootFeature/@subFeatures.3/@subCompositeFeatures.0/@subFeatures.1 //@rootFeature/@subFeatures.3"/>
+  <constraints name="Marker + Camera" rule="'Marker' REQUIRES 'Camera Model'"/>
+  <instances id="Map Based" descritpion="Map + DWA" selectedFeatures="//@rootFeature //@rootFeature/@subFeatures.0 //@rootFeature/@subFeatures.1 //@rootFeature/@subFeatures.2 //@rootFeature/@subFeatures.1/@containers.0/@subFeatures.0 //@rootFeature/@subFeatures.2/@containers.0/@subFeatures.1"/>
+  <instances id="Marker Based" descritpion="Marker + VHF + Camera 2" selectedFeatures="//@rootFeature //@rootFeature/@subFeatures.0 //@rootFeature/@subFeatures.1 //@rootFeature/@subFeatures.2 //@rootFeature/@subFeatures.2/@containers.0/@subFeatures.0 //@rootFeature/@subFeatures.1/@containers.0/@subFeatures.1 //@rootFeature/@subFeatures.3/@containers.0/@subFeatures.1 //@rootFeature/@subFeatures.3"/>
 </Ns:FeatureModel>
