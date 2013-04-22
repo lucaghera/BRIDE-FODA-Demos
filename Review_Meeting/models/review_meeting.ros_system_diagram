@@ -1,5 +1,101 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:ros="http://ros/1.0" xmi:id="__s3zUKEoEeKYROfmzfkMgg" type="RosSystem" name="review_meeting.ros_system_diagram" measurementUnit="Pixel">
+  <children xmi:type="notation:Shape" xmi:id="_Sw56wKs2EeKOX9-AHsIqHw" type="2001" fontName="Lucida Grande">
+    <children xmi:type="notation:DecorationNode" xmi:id="_Sw7v8Ks2EeKOX9-AHsIqHw" type="5008"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_Sw7v8as2EeKOX9-AHsIqHw" type="7001"/>
+    <element xmi:type="ros:Package" href="platform:/resource//brics_3d_bride_filtering_roi/model/brics_3d_filter_roi.ros_package#/"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Sw56was2EeKOX9-AHsIqHw"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_Sw7v8qs2EeKOX9-AHsIqHw" type="2001" fontName="Lucida Grande">
+    <children xmi:type="notation:DecorationNode" xmi:id="_Sw8XAKs2EeKOX9-AHsIqHw" type="5008"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_Sw8XAas2EeKOX9-AHsIqHw" type="7001"/>
+    <element xmi:type="ros:Package" href="platform:/resource//component_models/models/hbrs_object_finder.ros_package#/"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Sw7v86s2EeKOX9-AHsIqHw" x="1008" y="-9"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_Sw8XAqs2EeKOX9-AHsIqHw" type="2001" fontName="Lucida Grande">
+    <children xmi:type="notation:DecorationNode" xmi:id="_Sw8XBKs2EeKOX9-AHsIqHw" type="5008"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_Sw8XBas2EeKOX9-AHsIqHw" type="7001"/>
+    <element xmi:type="ros:Package" href="platform:/resource//component_models/models/object_manipulator.ros_package#/"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Sw8XA6s2EeKOX9-AHsIqHw" x="333" y="495"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_Sw8XBqs2EeKOX9-AHsIqHw" type="2001" fontName="Lucida Grande">
+    <children xmi:type="notation:DecorationNode" xmi:id="_Sw8-EKs2EeKOX9-AHsIqHw" type="5008"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_Sw8-Eas2EeKOX9-AHsIqHw" type="7001"/>
+    <element xmi:type="ros:Package" href="platform:/resource//component_models/models/openni_camera.ros_package#/"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Sw8XB6s2EeKOX9-AHsIqHw" x="450" y="-9"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_Sw8-Eqs2EeKOX9-AHsIqHw" type="2001" fontName="Lucida Grande">
+    <children xmi:type="notation:DecorationNode" xmi:id="_Sw8-FKs2EeKOX9-AHsIqHw" type="5008"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_Sw8-Fas2EeKOX9-AHsIqHw" type="7001"/>
+    <element xmi:type="ros:Package" href="platform:/resource//component_models/models/raw_fetch_and_carry.ros_package#/"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Sw8-E6s2EeKOX9-AHsIqHw" x="909" y="486"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_Sw9lIKs2EeKOX9-AHsIqHw" type="2001" fontName="Lucida Grande">
+    <children xmi:type="notation:DecorationNode" xmi:id="_Sw9lIqs2EeKOX9-AHsIqHw" type="5008"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_Sw9lI6s2EeKOX9-AHsIqHw" type="7001"/>
+    <element xmi:type="ros:Package" href="platform:/resource//component_models/models/amcl.ros_package#/"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Sw9lIas2EeKOX9-AHsIqHw" x="3357" y="1467"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_Sw9lJKs2EeKOX9-AHsIqHw" type="2001" fontName="Lucida Grande">
+    <children xmi:type="notation:DecorationNode" xmi:id="_Sw9lJqs2EeKOX9-AHsIqHw" type="5008"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_Sw9lJ6s2EeKOX9-AHsIqHw" type="7001"/>
+    <element xmi:type="ros:Package" href="platform:/resource//component_models/models/arm_kinematics_constraint_aware.ros_package#/"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Sw9lJas2EeKOX9-AHsIqHw" x="2760"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_Sw-MMKs2EeKOX9-AHsIqHw" type="2001" fontName="Lucida Grande">
+    <children xmi:type="notation:DecorationNode" xmi:id="_Sw-MMqs2EeKOX9-AHsIqHw" type="5008"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_Sw-MM6s2EeKOX9-AHsIqHw" type="7001"/>
+    <element xmi:type="ros:Package" href="platform:/resource//component_models/models/planning_environment.ros_package#/"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Sw-MMas2EeKOX9-AHsIqHw" x="3220"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_Sw-MNKs2EeKOX9-AHsIqHw" type="2001" fontName="Lucida Grande">
+    <children xmi:type="notation:DecorationNode" xmi:id="_Sw-zQKs2EeKOX9-AHsIqHw" type="5008"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_Sw-zQas2EeKOX9-AHsIqHw" type="7001"/>
+    <element xmi:type="ros:Package" href="platform:/resource//component_models/models/hokuyo_node.ros_package#/"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Sw-MNas2EeKOX9-AHsIqHw" x="1647" y="1566"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_Sw-zQqs2EeKOX9-AHsIqHw" type="2001" fontName="Lucida Grande">
+    <children xmi:type="notation:DecorationNode" xmi:id="_Sw-zRKs2EeKOX9-AHsIqHw" type="5008"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_Sw-zRas2EeKOX9-AHsIqHw" type="7001"/>
+    <element xmi:type="ros:Package" href="platform:/resource//component_models/models/map_server.ros_package#/"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Sw-zQ6s2EeKOX9-AHsIqHw" x="4140"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_Sw-zRqs2EeKOX9-AHsIqHw" type="2001" fontName="Lucida Grande">
+    <children xmi:type="notation:DecorationNode" xmi:id="_Sw_aUKs2EeKOX9-AHsIqHw" type="5008"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_Sw_aUas2EeKOX9-AHsIqHw" type="7001"/>
+    <element xmi:type="ros:Package" href="platform:/resource//component_models/models/raw_2dnav.ros_package#/"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Sw-zR6s2EeKOX9-AHsIqHw" x="1800" y="72"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_Sw_aUqs2EeKOX9-AHsIqHw" type="2001" fontName="Lucida Grande">
+    <children xmi:type="notation:DecorationNode" xmi:id="_Sw_aVKs2EeKOX9-AHsIqHw" type="5008"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_Sw_aVas2EeKOX9-AHsIqHw" type="7001"/>
+    <element xmi:type="ros:Package" href="platform:/resource//component_models/models/raw_move_arm_cart.ros_package#/"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Sw_aU6s2EeKOX9-AHsIqHw" x="1764" y="567"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_SxABYKs2EeKOX9-AHsIqHw" type="2001" fontName="Lucida Grande">
+    <children xmi:type="notation:DecorationNode" xmi:id="_SxABYqs2EeKOX9-AHsIqHw" type="5008"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_SxABY6s2EeKOX9-AHsIqHw" type="7001"/>
+    <element xmi:type="ros:Package" href="platform:/resource//component_models/models/youbot_joint_trajectory_action.ros_package#/"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SxABYas2EeKOX9-AHsIqHw" x="2511" y="1143"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_SxABZKs2EeKOX9-AHsIqHw" type="2001" fontName="Lucida Grande">
+    <children xmi:type="notation:DecorationNode" xmi:id="_SxAocKs2EeKOX9-AHsIqHw" type="5008"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_SxAocas2EeKOX9-AHsIqHw" type="7001"/>
+    <element xmi:type="ros:Package" href="platform:/resource//component_models/models/raw_base_placement.ros_package#/"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SxABZas2EeKOX9-AHsIqHw" x="783" y="1278"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_SxAocqs2EeKOX9-AHsIqHw" type="2001" fontName="Lucida Grande">
+    <children xmi:type="notation:DecorationNode" xmi:id="_SxAodKs2EeKOX9-AHsIqHw" type="5008"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_SxAodas2EeKOX9-AHsIqHw" type="7001"/>
+    <element xmi:type="ros:Package" href="platform:/resource//component_models/models/robot_state_publisher.ros_package#/"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SxAoc6s2EeKOX9-AHsIqHw" x="4689" y="927"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_SxAodqs2EeKOX9-AHsIqHw" type="2001" fontName="Lucida Grande">
+    <children xmi:type="notation:DecorationNode" xmi:id="_SxBPgKs2EeKOX9-AHsIqHw" type="5008"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_SxBPgas2EeKOX9-AHsIqHw" type="7001"/>
+    <element xmi:type="ros:Package" href="platform:/resource//component_models/models/youbot_oodl.ros_package#/"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SxAod6s2EeKOX9-AHsIqHw" x="2916" y="513"/>
+  </children>
   <styles xmi:type="notation:DiagramStyle" xmi:id="__s3zUaEoEeKYROfmzfkMgg"/>
   <element xmi:type="ros:Architecture" href="review_meeting.ros_system#/"/>
 </notation:Diagram>

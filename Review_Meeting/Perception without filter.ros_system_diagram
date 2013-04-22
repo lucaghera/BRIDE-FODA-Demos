@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:ros="http://ros/1.0" xmi:id="_CfblcKs4EeKOX9-AHsIqHw" type="RosSystem" name="Perception without filter.ros_system" measurementUnit="Pixel">
+  <children xmi:type="notation:Shape" xmi:id="_Cf8i0Ks4EeKOX9-AHsIqHw" type="2001" fontName="Lucida Grande">
+    <children xmi:type="notation:DecorationNode" xmi:id="_Cf8i0qs4EeKOX9-AHsIqHw" type="5008"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_Cf8i06s4EeKOX9-AHsIqHw" type="7001"/>
+    <element xmi:type="ros:Package" href="Perception%20without%20filter.ros_system#//@packages.0"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Cf8i0as4EeKOX9-AHsIqHw" x="729" y="18"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_Cf8i1Ks4EeKOX9-AHsIqHw" type="2001" fontName="Lucida Grande">
+    <children xmi:type="notation:DecorationNode" xmi:id="_Cf8i1qs4EeKOX9-AHsIqHw" type="5008"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_Cf8i16s4EeKOX9-AHsIqHw" type="7001"/>
+    <element xmi:type="ros:Package" href="Perception%20without%20filter.ros_system#//@packages.1"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Cf8i1as4EeKOX9-AHsIqHw" x="261" y="567"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_Cf9J4Ks4EeKOX9-AHsIqHw" type="2001" fontName="Lucida Grande">
+    <children xmi:type="notation:DecorationNode" xmi:id="_Cf9J4qs4EeKOX9-AHsIqHw" type="5008"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_Cf9J46s4EeKOX9-AHsIqHw" type="7001"/>
+    <element xmi:type="ros:Package" href="Perception%20without%20filter.ros_system#//@packages.2"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Cf9J4as4EeKOX9-AHsIqHw"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_Cf9J5Ks4EeKOX9-AHsIqHw" type="2001" fontName="Lucida Grande">
+    <children xmi:type="notation:DecorationNode" xmi:id="_Cf9J5qs4EeKOX9-AHsIqHw" type="5008"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_Cf9J56s4EeKOX9-AHsIqHw" type="7001"/>
+    <element xmi:type="ros:Package" href="Perception%20without%20filter.ros_system#//@packages.3"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Cf9J5as4EeKOX9-AHsIqHw" x="981" y="603"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_Cf9J6Ks4EeKOX9-AHsIqHw" type="2001" fontName="Lucida Grande">
+    <children xmi:type="notation:DecorationNode" xmi:id="_Cf9w8Ks4EeKOX9-AHsIqHw" type="5008"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_Cf9w8as4EeKOX9-AHsIqHw" type="7001"/>
+    <element xmi:type="ros:Package" href="Perception%20without%20filter.ros_system#//@packages.4"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Cf9J6as4EeKOX9-AHsIqHw" x="3051" y="1458"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_Cf9w8qs4EeKOX9-AHsIqHw" type="2001" fontName="Lucida Grande">
+    <children xmi:type="notation:DecorationNode" xmi:id="_Cf9w9Ks4EeKOX9-AHsIqHw" type="5008"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_Cf9w9as4EeKOX9-AHsIqHw" type="7001"/>
+    <element xmi:type="ros:Package" href="Perception%20without%20filter.ros_system#//@packages.5"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Cf9w86s4EeKOX9-AHsIqHw" x="2300"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_Cf9w9qs4EeKOX9-AHsIqHw" type="2001" fontName="Lucida Grande">
+    <children xmi:type="notation:DecorationNode" xmi:id="_Cf9w-Ks4EeKOX9-AHsIqHw" type="5008"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_Cf9w-as4EeKOX9-AHsIqHw" type="7001"/>
+    <element xmi:type="ros:Package" href="Perception%20without%20filter.ros_system#//@packages.6"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Cf9w96s4EeKOX9-AHsIqHw" x="2760"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_Cf-YAKs4EeKOX9-AHsIqHw" type="2001" fontName="Lucida Grande">
+    <children xmi:type="notation:DecorationNode" xmi:id="_Cf-YAqs4EeKOX9-AHsIqHw" type="5008"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_Cf-YA6s4EeKOX9-AHsIqHw" type="7001"/>
+    <element xmi:type="ros:Package" href="Perception%20without%20filter.ros_system#//@packages.7"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Cf-YAas4EeKOX9-AHsIqHw" x="1935" y="1575"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_Cf-YBKs4EeKOX9-AHsIqHw" type="2001" fontName="Lucida Grande">
+    <children xmi:type="notation:DecorationNode" xmi:id="_Cf-YBqs4EeKOX9-AHsIqHw" type="5008"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_Cf-YB6s4EeKOX9-AHsIqHw" type="7001"/>
+    <element xmi:type="ros:Package" href="Perception%20without%20filter.ros_system#//@packages.8"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Cf-YBas4EeKOX9-AHsIqHw" x="3680"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_Cf-YCKs4EeKOX9-AHsIqHw" type="2001" fontName="Lucida Grande">
+    <children xmi:type="notation:DecorationNode" xmi:id="_Cf-_EKs4EeKOX9-AHsIqHw" type="5008"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_Cf-_Eas4EeKOX9-AHsIqHw" type="7001"/>
+    <element xmi:type="ros:Package" href="Perception%20without%20filter.ros_system#//@packages.9"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Cf-YCas4EeKOX9-AHsIqHw" x="1548" y="63"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_Cf-_Eqs4EeKOX9-AHsIqHw" type="2001" fontName="Lucida Grande">
+    <children xmi:type="notation:DecorationNode" xmi:id="_Cf-_FKs4EeKOX9-AHsIqHw" type="5008"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_Cf-_Fas4EeKOX9-AHsIqHw" type="7001"/>
+    <element xmi:type="ros:Package" href="Perception%20without%20filter.ros_system#//@packages.10"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Cf-_E6s4EeKOX9-AHsIqHw" x="1656" y="594"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_Cf-_Fqs4EeKOX9-AHsIqHw" type="2001" fontName="Lucida Grande">
+    <children xmi:type="notation:DecorationNode" xmi:id="_Cf-_GKs4EeKOX9-AHsIqHw" type="5008"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_Cf-_Gas4EeKOX9-AHsIqHw" type="7001"/>
+    <element xmi:type="ros:Package" href="Perception%20without%20filter.ros_system#//@packages.11"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Cf-_F6s4EeKOX9-AHsIqHw" x="2340" y="1017"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_Cf_mIKs4EeKOX9-AHsIqHw" type="2001" fontName="Lucida Grande">
+    <children xmi:type="notation:DecorationNode" xmi:id="_Cf_mIqs4EeKOX9-AHsIqHw" type="5008"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_Cf_mI6s4EeKOX9-AHsIqHw" type="7001"/>
+    <element xmi:type="ros:Package" href="Perception%20without%20filter.ros_system#//@packages.12"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Cf_mIas4EeKOX9-AHsIqHw" x="927" y="1431"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_Cf_mJKs4EeKOX9-AHsIqHw" type="2001" fontName="Lucida Grande">
+    <children xmi:type="notation:DecorationNode" xmi:id="_Cf_mJqs4EeKOX9-AHsIqHw" type="5008"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_Cf_mJ6s4EeKOX9-AHsIqHw" type="7001"/>
+    <element xmi:type="ros:Package" href="Perception%20without%20filter.ros_system#//@packages.13"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Cf_mJas4EeKOX9-AHsIqHw" x="3843" y="720"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_Cf_mKKs4EeKOX9-AHsIqHw" type="2001" fontName="Lucida Grande">
+    <children xmi:type="notation:DecorationNode" xmi:id="_CgANMKs4EeKOX9-AHsIqHw" type="5008"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_CgANMas4EeKOX9-AHsIqHw" type="7001"/>
+    <element xmi:type="ros:Package" href="Perception%20without%20filter.ros_system#//@packages.14"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Cf_mKas4EeKOX9-AHsIqHw" x="2349" y="477"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_Cfblcas4EeKOX9-AHsIqHw"/>
+  <element xmi:type="ros:Architecture" href="Perception%20without%20filter.ros_system#/"/>
+</notation:Diagram>
